@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Текстовые поля в HTML</title>
+    </head>
+    <body>
+        <form>
+            <p>
+                Заказ: 
+                <input type="text" value="Кофе 3 в 1" name="item" disabled/>
+            </p>
+            <p>
+                <input type="search" placeholder="Найти товар" name="search"/>
+            </p>
+        </form>
+        <form>
+            <p>
+                <input list="deliveryTime" type="text" name="time" placeholder="Введите время доставки"/>
+            </p>
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+        </form>
+        <datalist id="deliveryTime">
+            <option value="Утро">9:00-11:00</option>
+            <option value="День">13:00-15:00</option>
+            <option value="Вечер">17:00-19:00</option>
+        </datalist>
+    </body>
+</html>

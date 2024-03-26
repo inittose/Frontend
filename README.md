@@ -1,5 +1,6 @@
 # Roadmap "Frontend Developer"
-Изучение основ frontend на базе [Roadmap](https://roadmap.sh/frontend)
+Изучение основ frontend на базе 
+<a href="https://roadmap.sh/frontend" target="_blank">Roadmap</a>
 
 ## Содержание
 1. [Интернет](./1%20-%20Internet/README.md)

@@ -1,5 +1,12 @@
 # Конспект "Как работает Интернет"
 
+> [!NOTE]
+> Информация взята из следующих источников: 
+> - [How does the Internet Work?](https://cs.fyi/guide/how-does-internet-work)
+> - [Как работает Интернет](https://developer.mozilla.org/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+
+#
+
 **Интернет** — очень большая сеть компьютеров, которые могут взаимодействовать друг с другом.
 
 **Интернет** — это инфраструктура, а **Веб** — это сервис.

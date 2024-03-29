@@ -2,6 +2,7 @@
 
 > [!NOTE]
 > Информация взята из следующих источников: 
+> - [Видео-курс по HTTP](https://deworker.pro/edu/series/http-basics)
 > - [Обзор протокола HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP/Overview)
 
 #

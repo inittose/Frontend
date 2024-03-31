@@ -2,7 +2,7 @@
 > [!NOTE]
 > Информация взята из следующих источников: 
 > - [Что такое хостинг простыми словами](https://help.reg.ru/support/hosting/zakaz-hostinga-rabota-s-uslugoy/chto-takoye-hosting-prostymi-slovami)
-> - [Хостинг *(Wikipedia)*](https://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3)
+> - [Хостинг<sup>*wikipedia*</sup>](https://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3)
 
 #
 ### Введение

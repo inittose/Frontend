@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валидация в HTML</title>
+</head>
+<body>
+    <form method="get">
+        <h2>С валидацией</h2>
+        <p>
+            <label for="surname">Фамилия:</label>
+            <input type="text" required id="surname" name="surname" />
+        </p>
+        <p>
+            <label for="name">Имя:</label>
+            <input type="text" required id="name" name="name" />
+        </p>
+        <p>
+            <label for="age">Возраст:</label>
+            <input type="number" min="1" max="100" value="18" id="age" name="age"/>
+        </p>
+        <p>
+            <label for="phone">Телефон: </label>
+            <input type="text" pattern="\+7\d{10}" placeholder="+7-000-000-00-00" id="phone" name="phone">
+        </p>
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+    </form>
+
+    <form method="get" novalidate>
+        <h2>Без валидации</h2>
+        <p>
+            <label for="surname">Фамилия:</label>
+            <input type="text" required id="surname" name="surname" />
+        </p>
+        <p>
+            <label for="name">Имя:</label>
+            <input type="text" required id="name" name="name" />
+        </p>
+        <p>
+            <label for="age">Возраст:</label>
+            <input type="number" min="1" max="100" value="18" id="age" name="age"/>
+        </p>
+        <p>
+            <label for="phone">Телефон: </label>
+            <input type="text" pattern="\+7\d{10}" placeholder="+7-000-000-00-00" id="phone" name="phone">
+        </p>
+        <p>
+            <button type="submit" formnovalidate>Отправить</button>
+        </p>
+    </form>
+</body>
+</html>

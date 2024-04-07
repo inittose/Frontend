@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Списки select в HTML</title>
+</head>
+<body>
+    <form method="get">
+        <p>
+            <label for="phone">Ваш телефон:</label>
+            <select name="phone" id="phone">
+                <option selected disabled>Выберите модель</option>
+                <optgroup label="Apple">
+                    <option value="iphone 6s">iPhone 6S</option>
+                    <option value="iphone 6s plus">iPhone 6S Plus</option>
+                    <option value="iphone 5se">iPhone 5SE</option>
+                </optgroup>
+                <optgroup label="Microsoft">
+                    <option value="lumia 950">Lumia 950</option>
+                    <option value="lumia 950 xl">Lumia 950 XL</option>
+                    <option value="lumia 650">Lumia 650</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+    </form>
+</body>
+</html>

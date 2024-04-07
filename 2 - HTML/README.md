@@ -8,6 +8,7 @@
 1. [Введение](./1%20-%20introduction/README.md)
 2. [Элементы HTML](./2%20-%20elements/README.md)
 3. [Формы](./3%20-%20forms/README.md)
+4. [Семантическая структура страницы](./4%20-%20semantic%20page%20structure/README.md)
 
 #
 

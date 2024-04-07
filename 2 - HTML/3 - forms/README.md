@@ -380,18 +380,7 @@
 ### Список select
 Элемент select создает список. В зависимости от настроек это может быть выпадающий список для выбора одного элемента, либо раскрытый список, в котором можно выбрать сразу несколько элементов:
 
-<form method="get">
-    <p>
-        <label for="phone">Выберите модель:</label>
-        <select id="phone" name="phone">
-            <option value="iphone 6s">iPhone 6S</option>
-            <option value="lumia 950">Lumia 950</option>
-            <option value="nexus 5x">Nexus 5X</option>
-            <option value="galaxy s7">Galaxy S7</option>
-        </select>
-    </p>
-</form>
-
+[В контексте](./src/select.html)
 ```html
 <form method="get">
     <p>
@@ -405,6 +394,64 @@
     </p>
 </form>
 ```
+
+`Select` также позволяет группировать элементы с помощью тега `<optgroup>`:
+
+[В контексте](./src/select.html)
+```html
+<form method="get">
+    <p>
+        <label for="phone">Выберите модель:</label>
+     
+        <select id="phone" name="phone">
+            <optgroup label="Apple">
+                <option value="iphone 6s">iPhone 6S</option>
+                <option value="iphone 6s plus">iPhone 6S Plus</option>
+                <option value="iphone 5se">iPhone 5SE</option>
+            </optgroup>
+            <optgroup label="Microsoft">
+                <option value="lumia 950">Lumia 950</option>
+                <option value="lumia 950 xl">Lumia 950 XL</option>
+                <option value="lumia 650">Lumia 650</option>
+            </optgroup>
+        </select>
+    </p>
+</form>
+```
+> Для создания списка с множественным выбором к элементу `select` надо добавить атрибут `multiple`.
+>
+> С помощью другого атрибута `disabled` можно запретить выбор определенного элемента. Как правило, элементы с этим атрибутом служат для создания заголовков.
+
+#
+### Textarea
+Чтобы создать многострочное текстовое поле используют элемент `textarea`:
+
+```html
+<form method="get">
+    <p>
+        <label for="comment">Ваш комментарий:</label><br/>
+        <textarea name="comment" id="comment" placeholder="Не более 200 символов" maxlength="200"></textarea>   
+    </p>
+</form>
+```
+> С помощью дополнительных атрибутов `cols` и `rows` можно задать соответственно количество столбцов и строк.
+
+#
+### Валидация форм
+Для создания валидации у элементов форм `HTML5` используется ряд атрибутов:
+- `required`: требует обязательного ввода значения. Для элементов `textarea`, `select`, `input` (с типом `text`, `password`, `checkbox`, `radio`, `file`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`)
+- `min` и `max`: минимально и максимально допустимые значения. Для элемента `input` с типом `datetime-local`, `date`, `month`, `time`, `week`, `number`, `range`
+- `pattern`: задает шаблон, которому должны соответствовать вводимые данные. Для элемента `input` с типом `text`, `password`, `email`, `url`, `search`, `tel`
+
+[В конексте](./src/validation.html)
+
+> Атрибут `novalidate`, либо у кнопки отправки атрибут `formnovalidate` отвечают за выключение обязательной валидации
+
+#
+### Элементы fieldset и legend
+Для группировки элементов формы нередко применяется элемент `fieldset`. Он создает границу вокруг вложенных элементов, как бы создавая из них группу. Вместе с ним используется элемент `legend`, который устанавливает заголовок для группы элементов.
+
+[В конексте](./src/fieldset.html)
 
 #
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Элементы для ввода информации HTML</title>
+    </head>
+    <body>
+        <form>
+            <p>
+                <label for="favcolor">Выберите цвет</label>
+                <input type="color" list="colors" id="favcolor" name="favcolor" />
+            </p>
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" placeholder="user@gmail.com" id="email" name="email"/>
+            </p>
+            <p>
+                <label for="url">URL: </label>
+                <input type="url" id="url" name="url"/>
+            </p>
+            <p>
+                <label for="phone">Телефон: </label>
+                <input type="tel" placeholder="(XXX)-XXX-XXXX" id="phone" name="phone"/>
+            </p>
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+            <datalist id="colors">
+                <option value="#0000FF" label="blue">
+                <option value="#008000" label="green">
+                <option value="#ff0000" label="red">
+            </datalist>
+        </form>
+    </body>
+</html>

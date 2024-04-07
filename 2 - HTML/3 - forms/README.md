@@ -165,7 +165,246 @@
     </p>
 </form>
 ```
-> Также в `input` можно применить атрибут autofocus, для автофокуса по умолчанию.
+> Также в `input` можно применить атрибут `autofocus`, для автофокуса по умолчанию.
+
+#
+### Элементы для ввода чисел
+Для ввода чисел используется элемент `input` с атрибутом `type="number"`. Он создает числовое поле, которое мы можем настроить с помощью следующих атрибутов:
+- `min`: минимально допустимое значение
+- `max`: максимально допустимое значение
+- `readonly`: доступно только для чтения
+- `required`: указывает, что данное поле обязательно должно иметь значение
+- `step`: значение, на которое будет увеличиваться число в поле
+- `value`: значение по умолчанию
+
+[В контексте](./src/numeric_field.html)
+
+```html
+<form>
+    <p>
+        <label for="age">Возраст: </label>
+        <input type="number" step="1" min="1" max="100" value="10" id="age" name="age"/>
+    </p>
+    <p>
+        <button type="submit">Отправить</button>
+    </p>
+</form>
+```
+
+> Как и в случае с текстовым полем мы можем здесь прикрепить список `datalist` с диапазоном возможных значений:
+>
+> [В контексте](./src/numeric_field.html)
+> ```html
+> <form>
+>     <p>
+>         <label for="price">Цена: </label>
+>         <input type="number" list="priceList"
+>             step="1000" min="3000" max="100000" value="10000" id="price" name="price"/>
+>     </p>
+>     <p>
+>         <button type="submit">Отправить</button>
+>     </p>
+> </form>
+> <datalist id="priceList">
+>     <option value="15000" />
+>     <option value="20000" />
+>     <option value="25000" />
+> </datalist>
+> ```
+
+Ползунок представляет шкалу, на которой мы можем выбрать одно из значений. Для создания ползунка применяется элемент `input` с атрибутом `type="range"`. Во многом ползунок похож на простое поле для ввода чисел. Он также имеет атрибуты `min`, `max`, `step` и `value`:
+
+[В контексте](./src/numeric_field.html)
+```html
+<form>
+    <p>
+        <label for="price">Цена:</label> 
+        1<input type="range" step="1" min="0" max="100" value="10" id="price" name="price"/>100
+    </p>
+    <p>
+        <button type="submit">Отправить</button>
+    </p>
+</form>
+```
+
+#
+### Флажки и переключатели
+Флажок представляет элемент, который может находиться в двух состояниях: отмеченном и неотмеченном. Флажок создается с помощью элемента `input` с атрибутом `type="checkbox"`:
+
+[В контексте](./src/checkboxes_radio.html)
+```html
+<form>
+    <p>
+        <input type="checkbox" checked name="html5"/>HTML5
+    </p>
+    <p>
+        <input type="checkbox" name="dotnet"/>.NET
+    </p>
+    <p>
+        <input type="checkbox" name="java"/>Java
+    </p>
+    <p>
+        <button type="submit">Отправить</button>
+    </p>
+</form>
+```
+
+Переключатели или радиокнопки похожи на флажки, они также могут находиться в отмеченном или неотмеченном состоянии. Только для переключателей можно создать одну группу, в которой одновременно можно выбрать только один переключатель. Например:
+
+[В контексте](./src/checkboxes_radio.html)
+```html
+<form>
+    <p>
+        <input type="radio" value="man" checked name="gender"/>мужской
+    </p>
+    <p>
+        <input type="radio" value="woman" name="gender"/>женский
+    </p>
+</form>
+```
+
+#
+### Элементы для ввода информации
+За установку цвета в HTML5 отвечает специальный элемент `input` с типом `color`:
+
+[В контексте](./src/input_info.html)
+```html
+<body>
+    <label for="favcolor">Выберите цвет</label>
+    <input type="color" id="favcolor" name="favcolor" />
+</body>
+```
+> С помощью элемента `datalist` мы можем задать набор цветов, из который пользователь может выбрать нужный:
+> 
+> [В контексте](./src/input_info.html)
+> ```html
+> <label for="favcolor">Выберите цвет</label>
+> <input type="color" list="colors" id="favcolor" name="favcolor" />
+> <datalist id="colors">
+>     <option value="#0000FF" label="blue">
+>     <option value="#008000" label="green">
+>     <option value="#ff0000" label="red">
+> </datalist>
+> ```
+
+Чтобы создать поле для ввода электронной почты используется:
+
+[В контексте](./src/input_info.html)
+```html
+<label for="email">Email: </label>
+<input type="email" placeholder="user@gmail.com" id="email" name="email"/>
+```
+
+Чтобы создать поле для ввода URL используется:
+
+[В контексте](./src/input_info.html)
+```html
+<label for="url">URL: </label>
+<input type="url" id="url" name="url"/>
+```
+
+Чтобы создать поле для ввода телефона используется:
+
+[В контексте](./src/input_info.html)
+```html
+<label for="phone">Телефон: </label>
+<input type="tel" placeholder="(XXX)-XXX-XXXX" id="phone" name="phone"/>
+```
+> Для их настройки мы можем использовать те же атрибуты, что и для обычного текстового поля:
+> - `maxlength`: максимально допустимое количество символов в поле
+> - `pattern`: определяет шаблон, которому должен соответствовать вводимый текст
+> - `placeholder`: устанавливает текст, который по умолчанию отображается в поле
+> - `readonly`: делает текстовом поле доступным только для чтения
+> - `required`: указывает, что текстовое поле обязательно должно иметь значение
+> - `size`: устанавливает ширину поля в видимых символах
+> - `value`: устанавливает значение по умолчанию для поля
+> - `list`: устанавливает привязку к элементу `datalist` со списком возможных значений
+
+#
+### Элементы для ввода даты и времени
+Для работы с датами и временем в HTML5 предназначено несколько типов элементов `input`:
+- `datetime-local`: устанавливает дату и время
+- `date`: устанавливает дату
+- `month`: устанавливает текущий месяц и год
+- `time`: устанавливает время
+- `week`: устанавливает текущую неделю
+
+[В контексте](./src/data_time.html)
+```html
+<form>
+    <p>
+        <label for="date">Дата: </label>
+        <input type="date" id="date" name="date"/>
+    </p>
+    <p>
+        <label for="week">Неделя: </label>
+        <input type="week" name="week" id="week" />
+    </p>
+    <p>
+        <label for="localdate">Дата и время: </label>
+        <input type="datetime-local" id="localdate" name="date"/>
+    </p>
+    <p>
+        <label for="month">Месяц: </label>
+        <input type="month" id="month" name="month"/>
+    </p>
+    <p>
+        <label for="time">Время: </label>
+        <input type="time" id="time" name="time"/>
+    </p>
+</form>
+```
+
+#
+### Отправка файлов
+За выбор файлов на форме отвечает элемент `input` с атрибутом `type="file"`:
+
+[В контексте](./src/file.html)
+```html
+<form enctype="multipart/form-data" method="post" action="http://localhost:8080/postfile.php">
+    <input type="file" name="file" />
+</form>
+```
+> Важно отметить, что для отправки файла на сервер форма должна иметь атрибут `enctype="multipart/form-data"`.
+> С помощью ряда атрибутов мы можем дополнительно настроить элементы выбора файла:
+> - `accept`: устанавливает тип файл, которые допустимы для выбора
+> - `multiple`: позволяет выбирать множество файлов
+> - `required`: требует обязательной установки файла
+> ```html
+> <form enctype="multipart/form-data" method="post" action="http://localhost:8080/postfile.php">
+>   <input type="file" name="file" multiple />
+> </form>
+> ```
+
+#
+### Список select
+Элемент select создает список. В зависимости от настроек это может быть выпадающий список для выбора одного элемента, либо раскрытый список, в котором можно выбрать сразу несколько элементов:
+
+<form method="get">
+    <p>
+        <label for="phone">Выберите модель:</label>
+        <select id="phone" name="phone">
+            <option value="iphone 6s">iPhone 6S</option>
+            <option value="lumia 950">Lumia 950</option>
+            <option value="nexus 5x">Nexus 5X</option>
+            <option value="galaxy s7">Galaxy S7</option>
+        </select>
+    </p>
+</form>
+
+```html
+<form method="get">
+    <p>
+        <label for="phone">Выберите модель:</label>
+        <select id="phone" name="phone">
+            <option value="iphone 6s">iPhone 6S</option>
+            <option value="lumia 950">Lumia 950</option>
+            <option value="nexus 5x">Nexus 5X</option>
+            <option value="galaxy s7">Galaxy S7</option>
+        </select>
+    </p>
+</form>
+```
 
 #
 
